@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap" rel="stylesheet">
+<script src="image-slot.js"></script>
+<style>
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#ffffff;font-family:"Barlow",sans-serif;-webkit-font-smoothing:antialiased;color:#2A2A2A}
+  :root{
+    --accent:#AD2127; --accent-dark:#8E1A1F;
+    --hero-bg:#232323; --hero-ink:#ffffff; --hero-muted:#B7B4AF; --hero-card:#2C2C2C; --hero-line:rgba(255,255,255,.12); --hero-grid:rgba(255,255,255,.05);
+  }
+  image-slot{--is-bg:#EDEBE6}
+  .eplax-wa .eplax-wa-label{width:0;overflow:hidden;white-space:nowrap;transition:width .32s cubic-bezier(.4,0,.2,1)}
+  .eplax-wa:hover .eplax-wa-label{width:230px}
+  .eplax-dd-menu{opacity:0;visibility:hidden;transform:translateY(8px);transition:opacity .2s ease,transform .2s ease,visibility .2s ease}
+  .eplax-dd:hover .eplax-dd-menu{opacity:1;visibility:visible;transform:translateY(0)}
+  .eplax-dd:hover .eplax-dd-caret{transform:rotate(180deg)}
+</style>
+</helmet>
+
+<div style="font-family:'Barlow',sans-serif;color:#2A2A2A">
+
+  <!-- ============ HEADER ============ -->
+  <header>
+    <!-- Tier 1: utility bar -->
+    <div style="background:#2A2A2A;color:#fff;display:flex;align-items:stretch;overflow:hidden">
+        <div style="background:var(--accent);display:flex;align-items:center;height:52px;padding-left:max(40px, calc((100% - 1240px) / 2 + 40px));padding-right:30px">
+          <span style="font:600 13.5px 'Barlow';letter-spacing:.04em;color:#fff;white-space:nowrap">Segunda a Sexta &nbsp;·&nbsp; 8h às 18h</span>
+        </div>
+        <a href="tel:+551141818330" style="display:flex;align-items:center;gap:11px;padding:0 30px;height:52px;border-right:1px solid rgba(255,255,255,.1);text-decoration:none;color:#fff">
+          <span style="color:var(--accent)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3-8.6A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8 9.6a16 16 0 006 6l1.2-1.2a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg></span>
+          <span style="font:500 14.5px 'Barlow';letter-spacing:.02em">(11) 4181-8330</span>
+        </a>
+        <a href="mailto:faleconosco@eplax.com.br" style="display:flex;align-items:center;gap:11px;padding:0 30px;height:52px;border-right:1px solid rgba(255,255,255,.1);text-decoration:none;color:#fff">
+          <span style="color:var(--accent)"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+          <span style="font:500 14.5px 'Barlow';letter-spacing:.02em">faleconosco@eplax.com.br</span>
+        </a>
+        <div style="flex:1"></div>
+        <button type="button" aria-label="Buscar" style="width:56px;height:52px;background:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#2A2A2A;transition:background .2s ease" style-hover="background:var(--accent);color:#fff">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+        </button>
+    </div>
+    </header>
+
+    <!-- Sticky block: logo + selos + nav -->
+    <div data-eplax-sticky="" style="position:sticky;top:0;z-index:50;background:#fff;transition:box-shadow .28s ease">
+    <!-- Tier 2: logo + selos -->
+    <div style="background:#fff">
+      <div style="max-width:1240px;margin:0 auto;padding:24px 40px;display:flex;align-items:center;justify-content:space-between;gap:32px">
+        <a href="index.html" style="display:flex;align-items:center;gap:12px;text-decoration:none">
+          <span style="display:block;width:16px;height:34px;background:var(--accent)"></span>
+          <span style="display:flex;flex-direction:column;line-height:1">
+            <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:34px;letter-spacing:.04em;color:#2A2A2A">EPLA<span style="color:var(--accent)">X</span></span>
+            <span style="font:500 10.5px 'Barlow';letter-spacing:.22em;text-transform:uppercase;color:#9A9790;margin-top:3px">Soluções e Tecnologia</span>
+          </span>
+        </a>
+        <div style="display:flex;align-items:center;gap:40px">
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="color:var(--accent)"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M7 5H4v2a3 3 0 003 3M17 5h3v2a3 3 0 01-3 3"/></svg></span>
+            <span style="display:flex;flex-direction:column;line-height:1.2">
+              <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;color:#2A2A2A;text-transform:uppercase">Engenharia de produto</span>
+              <span style="font:500 14px 'Barlow';color:#6E6B66">Soluções sob medida</span>
+            </span>
+          </div>
+          <div style="width:1px;height:46px;background:#E2E0DB"></div>
+          <div style="display:flex;align-items:center;gap:14px">
+            <span style="color:var(--accent)"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.3 1.6 2.8-.3 1 2.6 2.5 1.4-1 2.8 1 2.8-2.5 1.4-1 2.6-2.8-.3L12 22l-2.3-1.6-2.8.3-1-2.6L3.4 16l1-2.8-1-2.8 2.5-1.4 1-2.6 2.8.3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <span style="display:flex;flex-direction:column;line-height:1.2">
+              <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;color:#2A2A2A;text-transform:uppercase">Empresa certificada</span>
+              <span style="font:500 14px 'Barlow';color:#6E6B66">ISO 9001</span>
+            </span>
+          </div>
+          <div style="width:1px;height:46px;background:#E2E0DB"></div>
+          <a href="area-do-cliente.html" style="display:flex;align-items:center;gap:14px;text-decoration:none" >
+            <span style="color:var(--accent)"><svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a6 6 0 016-6h4a6 6 0 016 6v1"/></svg></span>
+            <span style="display:flex;flex-direction:column;line-height:1.2">
+              <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:19px;color:#2A2A2A;text-transform:uppercase">Área do Cliente</span>
+              <span style="font:500 14px 'Barlow';color:#6E6B66">Acompanhe seus pedidos</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tier 3: nav + CTA -->
+    <div style="background:#fff;border-top:1px solid #E2E0DB;border-bottom:1px solid #E2E0DB">
+      <div style="max-width:1240px;margin:0 auto;padding:0 40px;height:64px;display:flex;align-items:stretch;justify-content:space-between;gap:24px">
+        <nav style="display:flex;align-items:center;gap:32px">
+          <a href="index.html" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Início</a>
+          <a href="sobre.html" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Sobre</a>
+          <div class="eplax-dd" style="position:relative;display:flex;align-items:center;align-self:stretch">
+            <a href="index.html#produtos" style="display:flex;align-items:center;gap:6px;font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Produtos
+              <svg class="eplax-dd-caret" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" style="transition:transform .2s ease"><path d="M6 9l6 6 6-6"/></svg>
+            </a>
+            <div class="eplax-dd-menu" style="position:absolute;top:100%;left:-16px;min-width:248px;background:#fff;border:1px solid #E2E0DB;border-top:3px solid var(--accent);box-shadow:0 18px 40px rgba(0,0,0,.14);z-index:60;padding:8px 0">
+              <a href="index.html#produtos" style="display:block;padding:13px 22px;font:700 12.5px 'Barlow';letter-spacing:.1em;text-transform:uppercase;color:#2A2A2A;text-decoration:none;transition:background .18s ease,color .18s ease,padding .18s ease" style-hover="background:#F5F4F1;color:var(--accent);padding-left:28px">Caixas plásticas</a>
+              <a href="index.html#produtos" style="display:block;padding:13px 22px;font:700 12.5px 'Barlow';letter-spacing:.1em;text-transform:uppercase;color:#2A2A2A;text-decoration:none;transition:background .18s ease,color .18s ease,padding .18s ease" style-hover="background:#F5F4F1;color:var(--accent);padding-left:28px">Gabinetes plásticos</a>
+              <a href="index.html#produtos" style="display:block;padding:13px 22px;font:700 12.5px 'Barlow';letter-spacing:.1em;text-transform:uppercase;color:#2A2A2A;text-decoration:none;transition:background .18s ease,color .18s ease,padding .18s ease" style-hover="background:#F5F4F1;color:var(--accent);padding-left:28px">Caixas para automação</a>
+              <a href="index.html#produtos" style="display:block;padding:13px 22px;font:700 12.5px 'Barlow';letter-spacing:.1em;text-transform:uppercase;color:#2A2A2A;text-decoration:none;transition:background .18s ease,color .18s ease,padding .18s ease" style-hover="background:#F5F4F1;color:var(--accent);padding-left:28px">Soluções customizadas</a>
+            </div>
+          </div>
+          <a href="index.html#processo" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Processo</a>
+          <a href="index.html#segmentos" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Segmentos</a>
+          <a href="index.html#qualidade" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Qualidade</a>
+          <a href="contato.html" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:#2A2A2A;text-decoration:none" style-hover="color:var(--accent)">Contato</a>
+          <a href="blog.html" style="font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none">Blog</a>
+        </nav>
+        <a href="index.html#contato" style="display:inline-flex;align-items:center;justify-content:center;gap:11px;background:var(--accent);color:#fff;font:700 14px 'Barlow';letter-spacing:.1em;text-transform:uppercase;padding:0 38px;text-decoration:none;transition:background .2s ease" style-hover="background:var(--accent-dark)">
+        Solicitar Orçamento
+        <span style="font-size:16px;line-height:1">→</span>
+      </a>
+      </div>
+    </div>
+    </div>
+
+  <!-- ============ PAGE BANNER ============ -->
+  <section style="position:relative;overflow:hidden;background:#232323">
+    <div style="position:absolute;inset:0;overflow:hidden">
+      <image-slot id="eplax-blog-banner" style="display:block;position:absolute;inset:0;width:100%;height:100%" shape="rect" placeholder="Foto industrial de fundo"></image-slot>
+      <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,20,20,.92),rgba(20,20,20,.72))"></div>
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:52px 52px"></div>
+    </div>
+    <div style="position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:96px 40px;text-align:center">
+      <h1 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(38px,5vw,60px);line-height:1.04;color:var(--accent);margin:0 0 18px;text-transform:uppercase;letter-spacing:.01em">Blog &amp; Notícias</h1>
+      <div style="display:inline-flex;align-items:center;gap:12px;font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.06em;text-transform:uppercase">
+        <a href="index.html" style="color:#fff;text-decoration:none">Início</a>
+        <span style="color:var(--accent)">»</span>
+        <span style="color:var(--accent)">Blog</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG LIST ============ -->
+  <section style="padding:96px 0;background:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:0 40px;display:grid;grid-template-columns:1fr 360px;gap:60px;align-items:start">
+
+      <!-- main column -->
+      <div style="display:flex;flex-direction:column;gap:64px">
+        <article style="display:flex;flex-direction:column">
+          <div style="position:relative">
+            <image-slot id="eplax-post-1" style="display:block;width:100%;height:420px" shape="rect" placeholder="Imagem do artigo"></image-slot>
+            <span style="position:absolute;left:26px;bottom:-1px;background:var(--accent);color:#fff;font:700 12px 'Barlow';letter-spacing:.2em;text-transform:uppercase;padding:18px 9px;writing-mode:vertical-rl;transform:rotate(180deg);box-shadow:0 10px 24px rgba(0,0,0,.2)">Materiais</span>
+          </div>
+          <div style="padding:30px 0 0">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">28 Fev 2026</span>
+              <span style="width:18px;height:1px;background:#C9C6C1"></span>
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">24 Comentários</span>
+            </div>
+            <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(24px,2.4vw,32px);line-height:1.14;color:#2A2A2A;margin:0 0 16px;text-transform:uppercase">Como escolher o invólucro plástico certo para o seu projeto eletrônico</h2>
+            <p style="font-size:16px;line-height:1.7;color:#6E6B66;margin:0 0 26px;max-width:560px">Espessura, material, fixação e vedação: os critérios que definem a caixa ideal para cada aplicação — e como evitar retrabalho na produção.</p>
+            <div style="height:1px;background:#E9E7E2;margin-bottom:22px"></div>
+            <a href="#" style="display:inline-flex;align-items:center;gap:9px;font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none">Ler mais <span style="font-size:15px">→</span></a>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column">
+          <div style="position:relative">
+            <image-slot id="eplax-post-2" style="display:block;width:100%;height:420px" shape="rect" placeholder="Imagem do artigo"></image-slot>
+            <span style="position:absolute;left:26px;bottom:-1px;background:var(--accent);color:#fff;font:700 12px 'Barlow';letter-spacing:.2em;text-transform:uppercase;padding:18px 9px;writing-mode:vertical-rl;transform:rotate(180deg);box-shadow:0 10px 24px rgba(0,0,0,.2)">Tecnologia</span>
+          </div>
+          <div style="padding:30px 0 0">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">21 Fev 2026</span>
+              <span style="width:18px;height:1px;background:#C9C6C1"></span>
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">18 Comentários</span>
+            </div>
+            <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(24px,2.4vw,32px);line-height:1.14;color:#2A2A2A;margin:0 0 16px;text-transform:uppercase">Injeção de precisão: por que ela faz diferença no acabamento final</h2>
+            <p style="font-size:16px;line-height:1.7;color:#6E6B66;margin:0 0 26px;max-width:560px">Repetibilidade, encaixe perfeito e superfície limpa começam na ferramentaria. Entenda o que separa uma peça comum de uma peça premium.</p>
+            <div style="height:1px;background:#E9E7E2;margin-bottom:22px"></div>
+            <a href="#" style="display:inline-flex;align-items:center;gap:9px;font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none">Ler mais <span style="font-size:15px">→</span></a>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column">
+          <div style="position:relative">
+            <image-slot id="eplax-post-3" style="display:block;width:100%;height:420px" shape="rect" placeholder="Imagem do artigo"></image-slot>
+            <span style="position:absolute;left:26px;bottom:-1px;background:var(--accent);color:#fff;font:700 12px 'Barlow';letter-spacing:.2em;text-transform:uppercase;padding:18px 9px;writing-mode:vertical-rl;transform:rotate(180deg);box-shadow:0 10px 24px rgba(0,0,0,.2)">Fabricação</span>
+          </div>
+          <div style="padding:30px 0 0">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">14 Fev 2026</span>
+              <span style="width:18px;height:1px;background:#C9C6C1"></span>
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">31 Comentários</span>
+            </div>
+            <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(24px,2.4vw,32px);line-height:1.14;color:#2A2A2A;margin:0 0 16px;text-transform:uppercase">Do projeto 3D à peça final: as etapas de um gabinete sob medida</h2>
+            <p style="font-size:16px;line-height:1.7;color:#6E6B66;margin:0 0 26px;max-width:560px">Briefing, modelagem, prototipagem e série. Acompanhe o fluxo industrial completo de um gabinete plástico desenvolvido na Eplax.</p>
+            <div style="height:1px;background:#E9E7E2;margin-bottom:22px"></div>
+            <a href="#" style="display:inline-flex;align-items:center;gap:9px;font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none">Ler mais <span style="font-size:15px">→</span></a>
+          </div>
+        </article>
+        <article style="display:flex;flex-direction:column">
+          <div style="position:relative">
+            <image-slot id="eplax-post-4" style="display:block;width:100%;height:420px" shape="rect" placeholder="Imagem do artigo"></image-slot>
+            <span style="position:absolute;left:26px;bottom:-1px;background:var(--accent);color:#fff;font:700 12px 'Barlow';letter-spacing:.2em;text-transform:uppercase;padding:18px 9px;writing-mode:vertical-rl;transform:rotate(180deg);box-shadow:0 10px 24px rgba(0,0,0,.2)">Qualidade</span>
+          </div>
+          <div style="padding:30px 0 0">
+            <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">07 Fev 2026</span>
+              <span style="width:18px;height:1px;background:#C9C6C1"></span>
+              <span style="font:700 13px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)">12 Comentários</span>
+            </div>
+            <h2 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:clamp(24px,2.4vw,32px);line-height:1.14;color:#2A2A2A;margin:0 0 16px;text-transform:uppercase">Matéria-prima certificada: o impacto na durabilidade do produto</h2>
+            <p style="font-size:16px;line-height:1.7;color:#6E6B66;margin:0 0 26px;max-width:560px">Resistência mecânica, térmica e proteção UV. Por que a escolha do polímero é decisiva para a vida útil do invólucro.</p>
+            <div style="height:1px;background:#E9E7E2;margin-bottom:22px"></div>
+            <a href="#" style="display:inline-flex;align-items:center;gap:9px;font:700 13px 'Barlow';letter-spacing:.12em;text-transform:uppercase;color:var(--accent);text-decoration:none">Ler mais <span style="font-size:15px">→</span></a>
+          </div>
+        </article>
+      <div style="display:flex;gap:10px;margin-top:8px">
+        <a href="#" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:var(--accent);color:#fff;font:700 15px 'Oswald';text-decoration:none">1</a>
+        <a href="#" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #E2E0DB;color:#2A2A2A;font:700 15px 'Oswald';text-decoration:none;transition:background .2s ease,color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">2</a>
+        <a href="#" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #E2E0DB;color:#2A2A2A;font:700 15px 'Oswald';text-decoration:none;transition:background .2s ease,color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">3</a>
+        <a href="#" style="width:48px;height:48px;display:flex;align-items:center;justify-content:center;background:#fff;border:1px solid #E2E0DB;color:#2A2A2A;text-decoration:none;transition:background .2s ease,color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      </div>
+      </div>
+
+      <!-- sidebar -->
+      <aside style="display:flex;flex-direction:column;gap:34px;position:sticky;top:90px">
+        <div style="border:1px solid #E2E0DB;padding:30px 26px">
+          <form onSubmit="{{ onSubmit }}" style="display:flex;height:54px">
+            <input type="text" placeholder="Buscar no blog..." style="flex:1;font:500 15px 'Barlow';padding:0 16px;border:1px solid #E2E0DB;border-right:none;background:#F7F6F3;outline:none;color:#2A2A2A" style-focus="border-color:var(--accent)">
+            <button type="submit" aria-label="Buscar" style="width:56px;flex:none;background:var(--accent);border:none;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;transition:background .2s ease" style-hover="background:var(--accent-dark)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg></button>
+          </form>
+        </div>
+
+        <div style="border:1px solid #E2E0DB;padding:30px 26px">
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:22px;color:#2A2A2A;margin:0 0 8px;text-transform:uppercase">Posts Recentes</h3>
+          <div style="width:46px;height:3px;background:var(--accent);margin-bottom:24px"></div>
+          <div style="display:flex;flex-direction:column;gap:22px">
+          <a href="#" style="display:flex;gap:16px;align-items:center;text-decoration:none">
+            <image-slot id="eplax-rec-1" style="display:block;width:84px;height:84px;flex:none" shape="rect" placeholder="Img"></image-slot>
+            <span style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:17px;line-height:1.2;color:#2A2A2A;text-transform:uppercase">Loft office com decoração vintage para trabalhar</span>
+              <span style="display:flex;align-items:center;gap:10px;font:700 12px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)"><span>26 Fev</span><span style="width:1px;height:11px;background:#C9C6C1"></span><span>58 Comentários</span></span>
+            </span>
+          </a>
+          <a href="#" style="display:flex;gap:16px;align-items:center;text-decoration:none">
+            <image-slot id="eplax-rec-2" style="display:block;width:84px;height:84px;flex:none" shape="rect" placeholder="Img"></image-slot>
+            <span style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:17px;line-height:1.2;color:#2A2A2A;text-transform:uppercase">Tendências de gabinetes para automação em 2026</span>
+              <span style="display:flex;align-items:center;gap:10px;font:700 12px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)"><span>18 Fev</span><span style="width:1px;height:11px;background:#C9C6C1"></span><span>35 Comentários</span></span>
+            </span>
+          </a>
+          <a href="#" style="display:flex;gap:16px;align-items:center;text-decoration:none">
+            <image-slot id="eplax-rec-3" style="display:block;width:84px;height:84px;flex:none" shape="rect" placeholder="Img"></image-slot>
+            <span style="display:flex;flex-direction:column;gap:8px">
+              <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:17px;line-height:1.2;color:#2A2A2A;text-transform:uppercase">Pesquisa aplicada à indústria de injeção plástica</span>
+              <span style="display:flex;align-items:center;gap:10px;font:700 12px 'Barlow';letter-spacing:.04em;text-transform:uppercase;color:var(--accent)"><span>14 Fev</span><span style="width:1px;height:11px;background:#C9C6C1"></span><span>46 Comentários</span></span>
+            </span>
+          </a>
+          </div>
+        </div>
+
+        <div style="border:1px solid #E2E0DB;padding:30px 26px">
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:22px;color:#2A2A2A;margin:0 0 8px;text-transform:uppercase">Categorias</h3>
+          <div style="width:46px;height:3px;background:var(--accent);margin-bottom:14px"></div>
+          <div style="display:flex;flex-direction:column">
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)"><span>Materiais</span><span style="color:var(--accent)">→</span></a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)"><span>Tecnologia</span><span style="color:var(--accent)">→</span></a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)"><span>Fabricação</span><span style="color:var(--accent)">→</span></a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)"><span>Qualidade</span><span style="color:var(--accent)">→</span></a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)"><span>Automação</span><span style="color:var(--accent)">→</span></a>
+          <a href="#" style="display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)"><span>Notícias</span><span style="color:var(--accent)">→</span></a>
+          </div>
+        </div>
+
+        <div style="border:1px solid #E2E0DB;padding:30px 26px">
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:22px;color:#2A2A2A;margin:0 0 8px;text-transform:uppercase">Arquivos</h3>
+          <div style="width:46px;height:3px;background:var(--accent);margin-bottom:14px"></div>
+          <div style="display:flex;flex-direction:column">
+          <a href="#" style="display:block;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)">Dezembro 2025</a>
+          <a href="#" style="display:block;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)">Maio 2025</a>
+          <a href="#" style="display:block;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)">Março 2025</a>
+          <a href="#" style="display:block;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)">Fevereiro 2025</a>
+          <a href="#" style="display:block;padding:14px 0;border-bottom:1px solid #E9E7E2;font:600 15px 'Barlow';color:#2A2A2A;text-decoration:none;transition:color .2s ease" style-hover="color:var(--accent)">Janeiro 2025</a>
+          </div>
+        </div>
+
+        <div style="background:var(--accent);padding:36px 30px;position:relative;overflow:hidden">
+          <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.16) 1.4px,transparent 1.4px);background-size:22px 22px;opacity:.6"></div>
+          <div style="position:relative">
+            <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:24px;color:#fff;margin:0 0 12px;text-transform:uppercase;line-height:1.12">Precisa de um projeto sob medida?</h3>
+            <p style="font-size:15px;line-height:1.6;color:rgba(255,255,255,.9);margin:0 0 22px">Fale com a nossa engenharia e receba uma proposta para a sua caixa ou gabinete.</p>
+            <a href="index.html#contato" style="display:inline-flex;align-items:center;gap:9px;background:#fff;color:var(--accent);font:700 13px 'Barlow';letter-spacing:.1em;text-transform:uppercase;padding:14px 24px;text-decoration:none;transition:background .2s ease,color .2s ease" style-hover="background:#2A2A2A;color:#fff">Solicitar Orçamento →</a>
+          </div>
+        </div>
+
+        <div style="border:1px solid #E2E0DB;padding:30px 26px">
+          <h3 style="font-family:'Oswald',sans-serif;font-weight:600;font-size:22px;color:#2A2A2A;margin:0 0 8px;text-transform:uppercase">Tags</h3>
+          <div style="width:46px;height:3px;background:var(--accent);margin-bottom:20px"></div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Injeção</a>
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Gabinetes</a>
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Caixas</a>
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Eletrônica</a>
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Polímeros</a>
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Automação</a>
+          <a href="#" style="font:600 13px 'Barlow';letter-spacing:.02em;color:#2A2A2A;text-decoration:none;padding:9px 16px;border:1px solid #E2E0DB;transition:background .2s ease,color .2s ease,border-color .2s ease" style-hover="background:var(--accent);color:#fff;border-color:var(--accent)">Design</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ WHATSAPP FLUTUANTE ============ -->
+  <div style="position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:120;display:flex;flex-direction:column;align-items:flex-end">
+  <button type="button" onClick="{{ toggleWaForm }}" class="eplax-wa" aria-label="Falar com Atendimento no WhatsApp" style="border:none;cursor:pointer;display:flex;align-items:center;height:56px;background:#25D366;color:#fff;box-shadow:0 8px 26px rgba(0,0,0,.22);overflow:hidden;padding:0">
+    <span class="eplax-wa-label">
+      <span style="display:block;padding:0 18px 0 20px;font:700 13px 'Barlow';letter-spacing:.06em;text-transform:uppercase">Falar com Atendimento</span>
+    </span>
+    <span style="flex:none;width:56px;height:56px;display:flex;align-items:center;justify-content:center">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.48-.5-.67-.5l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.47 0 1.46 1.07 2.87 1.22 3.07.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.75-.72 2-1.4.25-.7.25-1.28.17-1.4-.07-.13-.27-.2-.57-.35zM12.04 2.5c-5.25 0-9.5 4.25-9.5 9.5 0 1.68.44 3.32 1.28 4.76L2.5 21.5l4.86-1.27c1.4.76 2.96 1.16 4.55 1.16h.01c5.24 0 9.5-4.25 9.5-9.5 0-2.54-.99-4.92-2.78-6.72A9.43 9.43 0 0012.04 2.5zm0 17.4h-.01c-1.42 0-2.81-.38-4.02-1.1l-.29-.17-2.99.78.8-2.92-.19-.3a7.87 7.87 0 01-1.21-4.2c0-4.36 3.55-7.9 7.91-7.9 2.11 0 4.1.82 5.59 2.32a7.85 7.85 0 012.31 5.59c0 4.36-3.55 7.9-7.91 7.9z"/></svg>
+    </span>
+  </button>
+    <sc-if value="{{ waFormOpen }}" hint-placeholder-val="{{ false }}">
+      <form onSubmit="{{ waSubmit }}" style="width:300px;margin-top:10px;background:#fff;border:1px solid #E2E0DB;box-shadow:0 18px 44px rgba(0,0,0,.22)">
+        <div style="background:#25D366;padding:16px 20px;display:flex;align-items:center;gap:10px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2.5c-5.25 0-9.5 4.25-9.5 9.5 0 1.68.44 3.32 1.28 4.76L2.5 21.5l4.86-1.27c1.4.76 2.96 1.16 4.55 1.16h.01c5.24 0 9.5-4.25 9.5-9.5 0-2.54-.99-4.92-2.78-6.72A9.43 9.43 0 0012.04 2.5z"/></svg>
+          <span style="font-family:'Oswald',sans-serif;font-weight:600;font-size:16px;color:#fff;text-transform:uppercase;letter-spacing:.02em">Iniciar conversa</span>
+        </div>
+        <div style="padding:20px;display:flex;flex-direction:column;gap:12px">
+          <input name="nome" type="text" required="required" placeholder="Nome" style="font:500 14px 'Barlow';padding:12px 14px;border:1px solid #D8D5CF;background:#fff;border-radius:2px;outline:none;color:#2A2A2A" style-focus="border-color:#25D366">
+          <input name="email" type="email" required="required" placeholder="E-mail" style="font:500 14px 'Barlow';padding:12px 14px;border:1px solid #D8D5CF;background:#fff;border-radius:2px;outline:none;color:#2A2A2A" style-focus="border-color:#25D366">
+          <input name="whatsapp" type="tel" required="required" placeholder="WhatsApp" style="font:500 14px 'Barlow';padding:12px 14px;border:1px solid #D8D5CF;background:#fff;border-radius:2px;outline:none;color:#2A2A2A" style-focus="border-color:#25D366">
+          <button type="submit" style="display:inline-flex;align-items:center;justify-content:center;gap:9px;background:#25D366;color:#fff;font:700 13px 'Barlow';letter-spacing:.08em;text-transform:uppercase;padding:14px 20px;border:none;border-radius:2px;cursor:pointer;transition:background .2s ease" style-hover="background:#1EBE5A">Iniciar conversa <span style="font-size:15px">→</span></button>
+        </div>
+      </form>
+    </sc-if>
+  </div>
+
+  <!-- ============ GO TO TOP ============ -->
+  <button type="button" data-gotop="" onClick="{{ goTop }}" aria-label="Voltar ao topo" style="position:fixed;right:28px;bottom:28px;z-index:120;width:48px;height:48px;background:#2A2A2A;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px;opacity:0;visibility:hidden;transform:translateY(14px);transition:opacity .3s ease,transform .3s ease,visibility .3s ease,background .2s ease" style-hover="background:var(--accent)">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- ============ MODAL VÍDEO ============ -->
+  <sc-if value="{{ videoOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ closeVideo }}" style="position:fixed;inset:0;z-index:200;background:rgba(14,14,14,.9);display:flex;align-items:center;justify-content:center;padding:24px">
+      <div onClick="{{ stopProp }}" style="position:relative;width:min(960px,100%)">
+        <button type="button" onClick="{{ closeVideo }}" aria-label="Fechar" style="position:absolute;top:-52px;right:0;width:42px;height:42px;background:var(--accent);border:none;cursor:pointer;color:#fff;display:flex;align-items:center;justify-content:center;border-radius:2px;transition:background .2s ease" style-hover="background:var(--accent-dark)">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+        <div style="position:relative;padding-top:56.25%;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.12)">
+          <iframe src="{{ videoSrc }}" title="Vídeo Eplax" style="position:absolute;inset:0;width:100%;height:100%;border:0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#1F1F1F;color:#fff">
+    <div style="max-width:1240px;margin:0 auto;padding:72px 40px 0;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:48px">
+      <div>
+        <div style="display:flex;align-items:center;gap:11px;margin-bottom:20px">
+          <span style="display:block;width:14px;height:26px;background:var(--accent)"></span>
+          <span style="font-family:'Oswald',sans-serif;font-weight:700;font-size:26px;letter-spacing:.04em;color:#fff">EPLA<span style="color:var(--accent)">X</span></span>
+        </div>
+        <p style="font-size:15px;line-height:1.7;color:#9A9790;margin:0 0 24px;max-width:300px">Soluções e tecnologia em caixas e gabinetes plásticos para a indústria eletrônica.</p>
+        <div style="display:flex;gap:12px">
+          <a href="index.html" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s ease,border-color .2s ease" style-hover="background:var(--accent);border-color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2a4 4 0 014-2c3 0 4 2 4 6v6h-4v-5c0-1.5-.5-2.5-2-2.5s-2 1-2 2.5v5h-4z"/></svg></a>
+          <a href="index.html" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s ease,border-color .2s ease" style-hover="background:var(--accent);border-color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+          <a href="index.html" style="width:40px;height:40px;border:1px solid rgba(255,255,255,.16);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s ease,border-color .2s ease" style-hover="background:var(--accent);border-color:var(--accent)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 01-1.2 4.4A8.5 8.5 0 0112.5 20 8.4 8.4 0 018 18.8L3 20l1.3-4.9A8.4 8.4 0 013 9.6 8.5 8.5 0 0111.5 3 8.5 8.5 0 0121 11.5z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:20px">Empresa</div>
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <a href="index.html#sobre" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Sobre a Eplax</a>
+          <a href="index.html#processo" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Processo</a>
+          <a href="index.html#qualidade" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Qualidade</a>
+          <a href="index.html#segmentos" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Segmentos</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:20px">Produtos</div>
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <a href="index.html#produtos" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Caixas plásticas</a>
+          <a href="index.html#produtos" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Gabinetes plásticos</a>
+          <a href="index.html#produtos" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Caixas para automação</a>
+          <a href="index.html#produtos" style="font-size:15px;color:#9A9790;text-decoration:none" style-hover="color:#fff">Soluções customizadas</a>
+        </div>
+      </div>
+      <div>
+        <div style="font-family:'Oswald',sans-serif;font-weight:600;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:#fff;margin-bottom:20px">Contato</div>
+        <div style="display:flex;flex-direction:column;gap:13px">
+          <span style="font-size:15px;color:#9A9790;line-height:1.5">Rua Antonio Ricardo, 55<br>Vila Lourdes — Carapicuíba / SP</span>
+          <span style="font-size:15px;color:#9A9790">(11) 4181-8330</span>
+          <span style="font-size:15px;color:#9A9790">faleconosco@eplax.com.br</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1240px;margin:56px auto 0;padding:24px 40px;border-top:1px solid rgba(255,255,255,.1);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+      <span style="font-size:13.5px;color:#7C7A75">© {{ year }} Eplax Soluções e Tecnologia. Todos os direitos reservados.</span>
+      <span style="font-size:13.5px;color:#7C7A75">Caixas e gabinetes plásticos para eletrônica</span>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accentColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#AD2127&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;heroTheme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Grafite escuro&quot;,&quot;Claro&quot;],&quot;default&quot;:&quot;Grafite escuro&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showStats&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;videoId&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;M7lc1UVf-VE&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;550000000000&quot;,&quot;tsType&quot;:&quot;string&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    this.applyTheme();
+    this._runStats = () => {
+      if (this._statsRan) return;
+      this._statsRan = true;
+      const targets = [35, 500, 20];
+      const dur = 1700;
+      const t0 = Date.now();
+      const step = () => {
+        const p = Math.min(1, (Date.now() - t0) / dur);
+        const eased = 1 - Math.pow(1 - p, 3);
+        this.setState({ statCounts: targets.map(t => Math.round(t * eased)) });
+        if (p < 1) { this._statsTimer = setTimeout(step, 30); }
+      };
+      step();
+    };
+    this._onScroll = () => {
+      const h = document.querySelector('[data-eplax-sticky]');
+      if (h) h.style.boxShadow = window.scrollY > 56 ? '0 8px 28px rgba(0,0,0,.12)' : 'none';
+      if (!this._statsRan) {
+        const s = document.querySelector('[data-stats]');
+        if (s) {
+          const r = s.getBoundingClientRect();
+          if (r.top < window.innerHeight * 0.85 && r.bottom > 0) this._runStats();
+        }
+      }
+      const top = document.querySelector('[data-gotop]');
+      if (top) {
+        const scrolled = window.scrollY + window.innerHeight;
+        const nearEnd = scrolled >= document.documentElement.scrollHeight - window.innerHeight * 0.6;
+        if (nearEnd) {
+          top.style.opacity = '1';
+          top.style.visibility = 'visible';
+          top.style.transform = 'translateY(0)';
+        } else {
+          top.style.opacity = '0';
+          top.style.visibility = 'hidden';
+          top.style.transform = 'translateY(14px)';
+        }
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    this._onScroll();
+    this._onKey = (e) => { if (e.key === 'Escape' && this.state.videoOpen) this.setState({ videoOpen: false }); };
+    window.addEventListener('keydown', this._onKey);
+  }
+  componentDidUpdate() { this.applyTheme(); }
+  componentWillUnmount() {
+    if (this._onScroll) window.removeEventListener('scroll', this._onScroll);
+    if (this._onKey) window.removeEventListener('keydown', this._onKey);
+    if (this._statsObs) this._statsObs.disconnect();
+    if (this._statsTimer) clearTimeout(this._statsTimer);
+  }
+  shade(hex, amt) {
+    try {
+      let c = String(hex).replace('#', '');
+      if (c.length === 3) c = c.split('').map(x => x + x).join('');
+      const n = parseInt(c, 16);
+      let r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+      r = Math.max(0, Math.min(255, Math.round(r * (1 + amt))));
+      g = Math.max(0, Math.min(255, Math.round(g * (1 + amt))));
+      b = Math.max(0, Math.min(255, Math.round(b * (1 + amt))));
+      return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+    } catch (e) { return hex; }
+  }
+  applyTheme() {
+    const root = document.documentElement;
+    const accent = this.props.accentColor || '#AD2127';
+    root.style.setProperty('--accent', accent);
+    root.style.setProperty('--accent-dark', this.shade(accent, -0.18));
+    const light = (this.props.heroTheme === 'Claro');
+    if (light) {
+      root.style.setProperty('--hero-bg', '#F5F4F1');
+      root.style.setProperty('--hero-ink', '#2A2A2A');
+      root.style.setProperty('--hero-muted', '#6E6B66');
+      root.style.setProperty('--hero-card', '#ffffff');
+      root.style.setProperty('--hero-line', 'rgba(0,0,0,.10)');
+      root.style.setProperty('--hero-grid', 'rgba(0,0,0,.045)');
+    } else {
+      root.style.setProperty('--hero-bg', '#232323');
+      root.style.setProperty('--hero-ink', '#ffffff');
+      root.style.setProperty('--hero-muted', '#B7B4AF');
+      root.style.setProperty('--hero-card', '#2C2C2C');
+      root.style.setProperty('--hero-line', 'rgba(255,255,255,.12)');
+      root.style.setProperty('--hero-grid', 'rgba(255,255,255,.05)');
+    }
+  }
+  segMove(dir) {
+    const vp = document.querySelector('[data-seg-vp]');
+    const track = document.querySelector('[data-seg-track]');
+    if (!vp || !track) return;
+    const step = 336; // card 312 + gap 24
+    const max = Math.max(0, track.scrollWidth - vp.clientWidth);
+    let cur = parseFloat(track.dataset.x || '0');
+    cur = Math.min(0, Math.max(-max, cur - dir * step));
+    track.dataset.x = cur;
+    track.style.transform = 'translateX(' + cur + 'px)';
+  }
+  renderVals() {
+    return {
+      year: new Date().getFullYear(),
+      statA: (this.state.statCounts ? this.state.statCounts[0] : 0).toLocaleString('pt-BR') + '+',
+      statB: (this.state.statCounts ? this.state.statCounts[1] : 0).toLocaleString('pt-BR') + '+',
+      statC: (this.state.statCounts ? this.state.statCounts[2] : 0).toLocaleString('pt-BR') + '+',
+      videoOpen: !!this.state.videoOpen,
+      videoSrc: this.state.videoOpen
+        ? 'https://www.youtube.com/embed/' + (this.props.videoId || 'M7lc1UVf-VE') + '?autoplay=1&rel=0'
+        : '',
+      openVideo: () => this.setState({ videoOpen: true }),
+      closeVideo: () => this.setState({ videoOpen: false }),
+      stopProp: (e) => { e.stopPropagation(); },
+      goTop: () => window.scrollTo({ top: 0, behavior: 'smooth' }),
+      waFormOpen: !!this.state.waFormOpen,
+      toggleWaForm: () => this.setState(s => ({ waFormOpen: !s.waFormOpen })),
+      waSubmit: (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const nome = f.nome.value.trim();
+        const email = f.email.value.trim();
+        const zap = f.whatsapp.value.trim();
+        const num = (this.props.whatsappNumber || '550000000000').replace(/\D/g, '');
+        const msg = 'Olá! Meu nome é ' + nome + '.\nE-mail: ' + email + '\nWhatsApp: ' + zap + '\nGostaria de falar com o atendimento da Eplax.';
+        window.open('https://wa.me/' + num + '?text=' + encodeURIComponent(msg), '_blank');
+        this.setState({ waFormOpen: false });
+        f.reset();
+      },
+      segPrev: () => this.segMove(-1),
+      segNext: () => this.segMove(1),
+      showStats: this.props.showStats !== false,
+      onSubmit: (e) => {
+        e.preventDefault();
+        const f = e.target;
+        const ok = f.querySelector('[data-form-ok]');
+        if (ok) ok.style.display = 'inline-flex';
+        f.reset();
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>
